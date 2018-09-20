@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A18C0F2A-E582-4FFD-913F-D33302DED9C6}"
+	ProjectSection(SolutionItems) = preProject
+		index.html = index.html
+		juhyang.html = juhyang.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "img", "img", "{ED33D770-A295-4721-B9ED-5C396D390788}"
+	ProjectSection(SolutionItems) = preProject
+		img\bgimg.jpg = img\bgimg.jpg
+		img\invite.jpg = img\invite.jpg
+		img\line.jpg = img\line.jpg
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{24D3662A-4258-409D-8C90-31A23CDFD60B}"
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ED33D770-A295-4721-B9ED-5C396D390788} = {A18C0F2A-E582-4FFD-913F-D33302DED9C6}
+		{24D3662A-4258-409D-8C90-31A23CDFD60B} = {A18C0F2A-E582-4FFD-913F-D33302DED9C6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D33E7BEF-7536-44D6-B1E0-F83992A0CB84}
+	EndGlobalSection
+EndGlobal
