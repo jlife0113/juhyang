@@ -199,11 +199,6 @@ body {
 </style>
 </head>
 <body>
-	<!---->
-	<div>
-        <img src="https://user-images.githubusercontent.com/12040501/45805247-3a8d0880-bcf9-11e8-891e-2802f8f9d4a6.jpg" class="img200" />
-    </div>
-    <!---->
     <div id="wrap">
         <!---->
         <div>
@@ -214,162 +209,32 @@ body {
             <a href="tel:010-7637-0153" class="bg1"><img src="https://cdn4.iconfinder.com/data/icons/miu/24/device-iPhone-smartphone-vertical-glyph-128.png" alt="tel">교회연락처</a>
             <a href="mailto:rmsidtest@gmail.com" class="bg3"><img src="https://cdn4.iconfinder.com/data/icons/miu/24/common-email-envelope-mail-outline-stroke-128.png" alt="email" />이메일</a>
         </div>
-        <div class="date_wrap">
-            <span><img src="https://cdn2.iconfinder.com/data/icons/office-38/24/office-40-128.png" alt="time" />일시 : <strong>2018년 10월 06일(토) 오전 11시</strong></span>
-        </div>
-        <div class="addr_wrap">
-            <span><img src="https://cdn4.iconfinder.com/data/icons/miu/24/house-home-real_estate-property-glyph-128.png" alt="place" /> <strong>장소 :</strong> | 대전광역시 서구 갈마로 241/ 지번 : 대전광역시 서구 갈마로 92-11</span>
-        </div>
-		<div class="map_wrap" id="map"></div>
 
-<!-- * Daum 지도 - 지도퍼가기 -->
-<!-- 1. 지도 노드 -->
-<div id="daumRoughmapContainer1537530979313" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+		<div class="map_wrap" id="map">aaaa</div>
 
-<!--
-	2. 설치 스크립트
-	* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
--->
-<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+		<!-- * Daum 지도 - 지도퍼가기 -->
+		<!-- 1. 지도 노드 -->
+		<div id="daumRoughmapContainer1537537394352" class="root_daum_roughmap root_daum_roughmap_landing"></div>
 
-<!-- 3. 실행 스크립트 -->
-<script charset="UTF-8">
-	new daum.roughmap.Lander({
-		"timestamp" : "1537530979313",
-		"key" : "q5x6",
-		"mapWidth" : 350,
-		"mapHeight" : "350"
-	}).render();
-</script>
+		<!--
+			2. 설치 스크립트
+			* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+		-->
+		<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
 
-<div>
-<script src="https://map.naver.com/?isDetailAddress=true&query=64yA7KCE6rSR7Jet7IucIOyEnOq1rCDrj4TshpTroZwyOTbrsojquLggNg%3D%3D&rcode=07170108&tab=1&lng=fd8ad75aaf86e04fdb28ba4d1a32e0fa&type=ADDRESS&dlevel=14&lat=bb481cd9b117f92ef13a3dc65a855888&enc=b64&isNewAddress=true"></script>
-</div>
+		<!-- 3. 실행 스크립트 -->
+		<script charset="UTF-8">
+			new daum.roughmap.Lander({
+				"timestamp" : "1537537394352",
+				"key" : "q5xe",
+				"mapWidth" : "450",
+				"mapHeight" : "300"
+			}).render();
+		</script>
 
-<div>
-	<ul>
-		<li>daum 지도</li>
-		<li>aaaaaaaa</li>
-	</ul>
-</div>
-
-<!--   ----------------------------------------------->
-<div id="mapdaum" style="width:100%;height:350px;"></div>
-<p><em>지도를 클릭해주세요!</em></p> 
-<div id="clickLatlng"></div>
-
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=915aef4780044c9b922d370bbd94c134"></script>
-<script>
-var mapContainer = document.getElementById('mapdaum'), // 지도를 표시할 div 
-    mapOption = { 
-        center: new daum.maps.LatLng(36.335014, 127.381131), // 지도의 중심좌표
-        level: 3 // 지도의 확대 레벨
-    };
-
-var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-
-// 지도를 클릭한 위치에 표출할 마커입니다
-var marker = new daum.maps.Marker({ 
-    // 지도 중심좌표에 마커를 생성합니다 
-    position: map.getCenter() 
-}); 
-// 지도에 마커를 표시합니다
-marker.setMap(map);
-
-// 지도에 클릭 이벤트를 등록합니다
-// 지도를 클릭하면 마지막 파라미터로 넘어온 함수를 호출합니다
-
-//daum.maps.event.addListener(map, 'click', function(mouseEvent) {        
-    
-    // 클릭한 위도, 경도 정보를 가져옵니다 
-   /// var latlng = mouseEvent.latLng; 
-    
-    // 마커 위치를 클릭한 위치로 옮깁니다
-    //marker.setPosition(latlng);
-    
-   // var message = '클릭한 위치의 위도는 ' + latlng.getLat() + ' 이고, ';
-    //message += '경도는 ' + latlng.getLng() + ' 입니다';
-    
-   // var resultDiv = document.getElementById('clickLatlng'); 
-    //resultDiv.innerHTML = message;
-    
-//});
-///////////////////////////////////////////////////////////////////////////////////////////////////
-
-</script>
-<!--마커새성-->
-<div id="map11" style="width:100%;height:350px;"></div>
-
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=915aef4780044c9b922d370bbd94c134"></script>
-<script>
-var mapContainer = document.getElementById('map11'), // 지도를 표시할 div 
-    mapOption = { 
-        center: new daum.maps.LatLng(36.335014, 127.381131), // 지도의 중심좌표
-        level: 3 // 지도의 확대 레벨
-    };
-
-var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-
-// 마커가 표시될 위치입니다 
-var markerPosition  = new daum.maps.LatLng(36.335014, 127.381131); 
-
-// 마커를 생성합니다
-var marker = new daum.maps.Marker({
-    position: markerPosition
-});
-
-// 마커가 지도 위에 표시되도록 설정합니다
-marker.setMap(map);
-
-// 아래 코드는 지도 위의 마커를 제거하는 코드입니다
-// marker.setMap(null);    
-</script>
-<!--ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ-->
-
-<!--///////////////////////////////////////////////////////////////////////////////////////////-->
-<div id="map1122" style="width:100%;height:350px;"></div>
-
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=915aef4780044c9b922d370bbd94c134"></script>
-<script>
-var mapContainer = document.getElementById('map1122'), // 지도를 표시할 div 
-    mapOption = { 
-        center: new daum.maps.LatLng(36.335014, 127.381131), // 지도의 중심좌표
-        level: 3 // 지도의 확대 레벨
-    };  
-
-var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-    
-// 지도타입 컨트롤의 지도 또는 스카이뷰 버튼을 클릭하면 호출되어 지도타입을 바꾸는 함수입니다
-function setMapType(maptype) { 
-    var roadmapControl = document.getElementById('btnRoadmap');
-    var skyviewControl = document.getElementById('btnSkyview'); 
-    if (maptype === 'roadmap') {
-        map.setMapTypeId(daum.maps.MapTypeId.ROADMAP);    
-        roadmapControl.className = 'selected_btn';
-        skyviewControl.className = 'btn';
-    } else {
-        map.setMapTypeId(daum.maps.MapTypeId.HYBRID);    
-        skyviewControl.className = 'selected_btn';
-        roadmapControl.className = 'btn';
-    }
-}
-
-// 지도 확대, 축소 컨트롤에서 확대 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
-function zoomIn() {
-    map.setLevel(map.getLevel() - 1);
-}
-
-// 지도 확대, 축소 컨트롤에서 축소 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
-function zoomOut() {
-    map.setLevel(map.getLevel() + 1);
-}
-</script>
-<!--///////////////////////////////////////////////////////////////////////////////////////////-->
-
-<br>
-<div class="contact_wrap">
-	<a href="http://map.daum.net/link/to/12720796">길찾기</a>
-</div>
+		<div class="contact_wrap">
+			<a href="http://map.daum.net/link/to/12720796">길찾기</a>
+		</div>
 
 <!--   ----------------------------------------------->
 
@@ -384,7 +249,7 @@ function zoomOut() {
         <div class="copy">
             © Copyright 2018, 주향제일교회
         </div>
-    </div>
+	</div>
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?signed_in=true"></script>
