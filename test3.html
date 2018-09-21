@@ -1,50 +1,136 @@
+@@ -0,0 +1,288 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>클릭한 위치에 마커 표시하기</title>
-    
+<title>초대합니다 :-)</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes" />
+
+<meta property="og:site_name" content="babyparty" />
+<meta property="og:title" content="우리아이 생일을 축하해 주세요." />
+<meta property="og:description" content="2016년 2월 3일 오후 1시, 봄파티에서 우리아이 생일을 축하해주세요~" />
+<meta property="og:image" content="https://cloud.githubusercontent.com/assets/16554116/12774533/375b55dc-ca89-11e5-9829-e5984d1d2efa.jpg" />
+<meta property="og:image" content="https://cloud.githubusercontent.com/assets/16554116/12774535/375cf090-ca89-11e5-8589-c69d0f62defb.jpg" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="rmsidtest.github.io" />
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-text-size-adjust: 100%;
+}
+
+html,body {
+	height: 100%;
+}
+
+body {
+	background-color: #eee;
+}
+
+#wrap {
+	max-width: 500px;
+	margin: 0 auto;
+	background-color: #fff;
+	height: auto;
+}
+
+.img100 {
+	max-width: 100%;
+	width: auto !important;
+	width: 100%;
+}
+
+#autoplay, .slide_wrap {
+	position:relative;
+	width:100%;
+	overflow:hidden;
+}
+
+.map_wrap {
+	margin: 0 15px;
+	height: 200px;
+	background-color: #ddd;
+	text-align: center;
+	font-size: 14px;
+}
+
+.copy {
+	font-size:12px;
+	color:#888;
+	text-align:center;
+	padding-top:15px;
+	padding-bottom:15px;
+}
+
+</style>
 </head>
 <body>
-<div id="map" style="width:100%;height:350px;"></div>
-<p><em>지도를 클릭해주세요!</em></p> 
-<div id="clickLatlng"></div>
+	<div id="wrap">
+        <div class="slide_wrap">
+                    <div id="autoplay" style="display:none;">
+                        <!-- //이미지 추가 -->
+                        <img src="https://user-images.githubusercontent.com/12040501/45604325-284b6a00-ba6e-11e8-89b7-0298b74418c3.jpg" class="img100" />
+                        <img src="https://user-images.githubusercontent.com/12040501/45604327-2ed9e180-ba6e-11e8-991a-d8d5bcbc7ef9.jpg" class="img100" />
+                    </div>
+        </div>
+		
+		
+		<div class="copy">
+			© Copyright 2016, 이상하네.....!!!!!!!!!!!!@@@@@@@@@@@
+        </div>
+        <div class="map_wrap" id="map"></div>
 
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=915aef4780044c9b922d370bbd94c134"></script>
-<script>
-var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-    mapOption = { 
-        center: new daum.maps.LatLng(36.335014, 127.381131), // 지도의 중심좌표
-        level: 3 // 지도의 확대 레벨
-    };
-
-var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-
-// 지도를 클릭한 위치에 표출할 마커입니다
-var marker = new daum.maps.Marker({ 
-    // 지도 중심좌표에 마커를 생성합니다 
-    position: map.getCenter() 
-}); 
-// 지도에 마커를 표시합니다
-marker.setMap(map);
-
-// 지도에 클릭 이벤트를 등록합니다
-// 지도를 클릭하면 마지막 파라미터로 넘어온 함수를 호출합니다
-daum.maps.event.addListener(map, 'click', function(mouseEvent) {        
-    
-    // 클릭한 위도, 경도 정보를 가져옵니다 
-    var latlng = mouseEvent.latLng; 
-    
-    // 마커 위치를 클릭한 위치로 옮깁니다
-    marker.setPosition(latlng);
-    
-    var message = '클릭한 위치의 위도는 ' + latlng.getLat() + ' 이고, ';
-    message += '경도는 ' + latlng.getLng() + ' 입니다';
-    
-    var resultDiv = document.getElementById('clickLatlng'); 
-    resultDiv.innerHTML = message;
-    
-});
-</script>
+        
+    </div>
+    <!-- * Daum 지도 - 지도퍼가기 -->
+    <!-- 1. 지도 노드 -->
+    <div id="daumRoughmapContainer1537537394352" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+	<!--
+		2. 설치 스크립트
+		* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+	-->
+	<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
+	<script>
+	$(function(e) {
+		initMap();
+		
+		var targetEle = $("#autoplay");
+		targetEle.find("img").css("cssText" , "width:" + targetEle.width() + "px !important;");
+		targetEle.slick({
+			slidesToShow : 1,
+			slidesToScroll : 1,
+			autoplay : true,
+			autoplaySpeed : 2000,
+			dots: false,
+		  	infinite: true,
+		  	variableWidth: true
+		});
+		targetEle.css({"display" : "block"});
+		var tmpHeight = 0;
+		targetEle.find("img").each(function(k, v) {
+			var _this = $(this);
+			if( tmpHeight == 0 || tmpHeight > _this.height() ) {
+				tmpHeight = _this.height();
+			}
+		});
+		$(".slide_wrap").height(tmpHeight);
+	});
+    </script>
+    <!-- 3. 실행 스크립트 -->
+	<script charset="UTF-8">
+            new daum.roughmap.Lander({
+                "timestamp" : "1537537394352",
+                "key" : "q5xe",
+                "mapWidth" : 350,
+                "mapHeight" : "300"
+                }).render();
+    </script>
 </body>
 </html>
