@@ -187,9 +187,18 @@ body {
 	padding-right: 5px;
 }
 .copy {
-	font-size:12px;
-	color:#888;
+	font-size:13px;
+	color:#8d968c;
 	text-align:center;
+	padding-top:15px;
+	padding-bottom:15px;
+}
+.location {
+	font-size:12px;
+	margin: 0 15px;
+	padding: 10px 0;
+	color:#888;
+	text-align:left;
 	padding-top:15px;
 	padding-bottom:15px;
 }
@@ -202,35 +211,41 @@ body {
     <div id="wrap">
         <!---->
         <div>
-            <img src="https://user-images.githubusercontent.com/12040501/45805247-3a8d0880-bcf9-11e8-891e-2802f8f9d4a6.jpg" class="img200" />
+			<img src="https://user-images.githubusercontent.com/12040501/45889953-b6bc4480-bdfc-11e8-878a-62f51a248a6e.png" class="img200" />
+			<img src="https://user-images.githubusercontent.com/12040501/45889956-b7ed7180-bdfc-11e8-807b-fc8479dfbd13.png" class="img200" />
+			<img src="https://user-images.githubusercontent.com/12040501/45889959-ba4fcb80-bdfc-11e8-9764-1752f01e4811.png" class="img200" />
         </div>
-        <!---->
+		<!---->
+		<!--  -  
         <div class="contact_wrap">
             <a href="tel:010-7637-0153" class="bg1"><img src="https://cdn4.iconfinder.com/data/icons/miu/24/device-iPhone-smartphone-vertical-glyph-128.png" alt="tel">교회연락처</a>
             <a href="mailto:rmsidtest@gmail.com" class="bg3"><img src="https://cdn4.iconfinder.com/data/icons/miu/24/common-email-envelope-mail-outline-stroke-128.png" alt="email" />이메일</a>
-        </div>
-
-		<div class="map_wrap" id="map">aaaa</div>
-
-		<!-- * Daum 지도 - 지도퍼가기 -->
-		<!-- 1. 지도 노드 -->
-		<div id="daumRoughmapContainer1537537394352" class="root_daum_roughmap root_daum_roughmap_landing"></div>
-
-		<!--
-			2. 설치 스크립트
-			* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+		</div>
 		-->
-		<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+		<div class="location">
+			LOCATION<br/>
+			찾아오시는길
+		</div>
+		<div class="map_wrap">
+			<!-- * Daum 지도 - 지도퍼가기 -->
+			<!-- 1. 지도 노드 -->
+			<div id="daumRoughmapContainer1537537394352" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+		</div>
+			<!--
+				2. 설치 스크립트
+				* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+			-->
+			<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
 
-		<!-- 3. 실행 스크립트 -->
-		<script charset="UTF-8">
-			new daum.roughmap.Lander({
-				"timestamp" : "1537537394352",
-				"key" : "q5xe",
-				"mapWidth" : "450",
-				"mapHeight" : "300"
-			}).render();
-		</script>
+			<!-- 3. 실행 스크립트 -->
+			<script charset="UTF-8">
+				new daum.roughmap.Lander({
+					"timestamp" : "1537537394352",
+					"key" : "q5xe",
+					"mapWidth" : "450",
+					"mapHeight" : "300"
+				}).render();
+			</script>
 
 		<div class="contact_wrap">
 			<a href="http://map.daum.net/link/to/12720796">길찾기</a>
