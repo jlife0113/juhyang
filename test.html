@@ -9,7 +9,7 @@
 <!-- 로드뷰를 표시할 div 입니다 -->
 <div id="roadview" style="width:100%;height:300px;"></div>
 
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e15adababf9c8d1ba0e7445bb64425b7 "></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e15adababf9c8d1ba0e7445bb64425b7"></script>
 <script>
 var roadviewContainer = document.getElementById('roadview'); //로드뷰를 표시할 div
 var roadview = new daum.maps.Roadview(roadviewContainer); //로드뷰 객체
@@ -22,20 +22,7 @@ roadviewClient.getNearestPanoId(position, 50, function(panoId) {
     roadview.setPanoId(panoId, position); //panoId와 중심좌표를 통해 로드뷰 실행
 });
 
-<!-- 지도를 표시할 div 입니다 -->
-<div id="map" style="width:100%;height:350px;"></div>
 
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e15adababf9c8d1ba0e7445bb64425b7 "></script>
-<script>
-var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-    mapOption = { 
-        center: new daum.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
-        level: 3 // 지도의 확대 레벨
-    };
-
-// 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
-var map = new daum.maps.Map(mapContainer, mapOption); 
-</script>
 
 </script>
 </body>
