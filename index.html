@@ -209,19 +209,20 @@ body {
 </head>
 <body>
     <div id="wrap">
-        <!---->
+			<div class="slide_wrap">
+					<div id="autoplay" style="display:none;">
+						<!-- //이미지 추가 -->
+						<img src="https://user-images.githubusercontent.com/12040501/45909049-c65a7e00-be3a-11e8-8c39-c64fa6860ce5.png" class="img100" />
+						<img src="https://user-images.githubusercontent.com/12040501/45604327-2ed9e180-ba6e-11e8-991a-d8d5bcbc7ef9.jpg" class="img100" />
+						<img src="https://user-images.githubusercontent.com/12040501/45604329-36998600-ba6e-11e8-8059-5f0515ad72e9.jpg" class="img100" />
+					</div>
+				</div>
         <div>
 			<img src="https://user-images.githubusercontent.com/12040501/45909049-c65a7e00-be3a-11e8-8c39-c64fa6860ce5.png" class="img200" />
 			<img src="https://user-images.githubusercontent.com/12040501/45909054-c8244180-be3a-11e8-9f31-40d021576879.png" class="img200" />
 			<img src="https://user-images.githubusercontent.com/12040501/45909056-ca869b80-be3a-11e8-92dd-dbc73f0155a5.png" class="img200" />
         </div>
-		<!---->
-		<!--  -  
-        <div class="contact_wrap">
-            <a href="tel:010-7637-0153" class="bg1"><img src="https://cdn4.iconfinder.com/data/icons/miu/24/device-iPhone-smartphone-vertical-glyph-128.png" alt="tel">교회연락처</a>
-            <a href="mailto:rmsidtest@gmail.com" class="bg3"><img src="https://cdn4.iconfinder.com/data/icons/miu/24/common-email-envelope-mail-outline-stroke-128.png" alt="email" />이메일</a>
-		</div>
-		-->
+		
 		<div class="location">
 			LOCATION<br/>
 			찾아오시는길
@@ -251,16 +252,7 @@ body {
 			<a href="http://map.daum.net/link/to/12720796">길찾기</a>
 		</div>
 
-<!--   ----------------------------------------------->
-
-        <div class="slide_wrap">
-            <div id="autoplay" style="display:none;">
-                <!-- //이미지 추가 -->
-                <img src="https://user-images.githubusercontent.com/12040501/45604325-284b6a00-ba6e-11e8-89b7-0298b74418c3.jpg" class="img100" />
-                <img src="https://user-images.githubusercontent.com/12040501/45604327-2ed9e180-ba6e-11e8-991a-d8d5bcbc7ef9.jpg" class="img100" />
-                <img src="https://user-images.githubusercontent.com/12040501/45604329-36998600-ba6e-11e8-8059-5f0515ad72e9.jpg" class="img100" />
-            </div>
-        </div>
+        
         <div class="copy">
             © Copyright 2018, 주향제일교회
         </div>
@@ -270,30 +262,6 @@ body {
 	<script src="https://maps.googleapis.com/maps/api/js?signed_in=true"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
 	<script>
-	var latlng = "36.335014, 127.381131"; //구글맵에서 위치 검색 후, 맵을 클릭하면 나오는 하단의 좌표를 입력한다.
-
-	function initMap() {
-		if (latlng.length <= 0)
-			return false;
-		arr = latlng.split(",");
-		if (arr.length <= 1)
-			return false;
-
-		var myLatLng = {
-			lat : parseFloat($.trim(arr[0])),
-			lng : parseFloat($.trim(arr[1]))
-		};
-		var map = new google.maps.Map(document.getElementById('map'), {
-			zoom : 17,
-			center : myLatLng
-		});
-		var arr = [];
-
-		new google.maps.Marker({
-			position : myLatLng,
-			map : map
-		});
-	}
 	$(function(e) {
 		initMap();
 		
@@ -318,7 +286,6 @@ body {
 		});
 		$(".slide_wrap").height(tmpHeight);
 	});
-	
 	</script>
 </body>
 </html>
