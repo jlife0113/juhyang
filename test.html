@@ -231,27 +231,25 @@ body {
         <!-- * Daum 지도 - 지도퍼가기 -->
 		<!-- 1. 지도 노드 -->
 		<div id="daumRoughmapContainer1537537394352" class="root_daum_roughmap root_daum_roughmap_landing" align="center"></div>
-		
-		<!--
-			2. 설치 스크립트
-			* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
-		-->
-		<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
 
-		<!-- 3. 실행 스크립트 -->
-		<script charset="UTF-8">
-			new daum.roughmap.Lander({
-				"timestamp" : "1537537394352",
-				"key" : "q5xe",
-				"mapWidth" : 350,
-				"mapHeight" : "300"
-				}).render();
-		</script>
 	</div>
-	
+	<!--
+		2. 설치 스크립트
+		* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+	-->
+	<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?signed_in=true"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
+    <!-- 3. 실행 스크립트 -->
+	<script charset="UTF-8">
+        new daum.roughmap.Lander({
+            "timestamp" : "1537537394352",
+            "key" : "q5xe",
+            "mapWidth" : 350,
+            "mapHeight" : "300"
+            }).render();
+    </script>
 	<script>
 	var latlng = "37.378100, 127.112298"; //구글맵에서 위치 검색 후, 맵을 클릭하면 나오는 하단의 좌표를 입력한다.
 
