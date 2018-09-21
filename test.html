@@ -188,13 +188,13 @@ body {
 </head>
 <body>
 	<div id="wrap">
-            <div class="slide_wrap">
+        <div class="slide_wrap">
                     <div id="autoplay" style="display:none;">
                         <!-- //이미지 추가 -->
                         <img src="https://user-images.githubusercontent.com/12040501/45604325-284b6a00-ba6e-11e8-89b7-0298b74418c3.jpg" class="img100" />
                         <img src="https://user-images.githubusercontent.com/12040501/45604327-2ed9e180-ba6e-11e8-991a-d8d5bcbc7ef9.jpg" class="img100" />
                     </div>
-            </div>
+        </div>
 		<div class="content_wrap">
 			<h1><img src="https://cdn0.iconfinder.com/data/icons/kameleon-free-pack/110/Party-Poppers-128.png" alt="icon finder free icon" />우리 아가의 돌잔치에 초대합니다<img src="https://cdn0.iconfinder.com/data/icons/kameleon-free-pack/110/Party-Poppers-128.png" alt="icon finder free icon" /></h1>
 			항상 저희를 아껴주시고, 응원해 주시는 분들께<br />
@@ -223,10 +223,8 @@ body {
         
     </div>
     <!-- * Daum 지도 - 지도퍼가기 -->
-        <!-- 1. 지도 노드 -->
-    <div class="map_wrap">
-        <div id="daumRoughmapContainer1537537394352" class="root_daum_roughmap root_daum_roughmap_landing"></div>
-    </div>
+    <!-- 1. 지도 노드 -->
+    <div id="daumRoughmapContainer1537537394352" class="root_daum_roughmap root_daum_roughmap_landing"></div>
 	<!--
 		2. 설치 스크립트
 		* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
@@ -235,15 +233,7 @@ body {
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?signed_in=true"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
-    <!-- 3. 실행 스크립트 -->
-	<script charset="UTF-8">
-        new daum.roughmap.Lander({
-            "timestamp" : "1537537394352",
-            "key" : "q5xe",
-            "mapWidth" : 350,
-            "mapHeight" : "300"
-            }).render();
-    </script>
+    
 	<script>
 	var latlng = "37.378100, 127.112298"; //구글맵에서 위치 검색 후, 맵을 클릭하면 나오는 하단의 좌표를 입력한다.
 
@@ -294,6 +284,15 @@ body {
 		$(".slide_wrap").height(tmpHeight);
 	});
 	
-	</script>
+    </script>
+    <!-- 3. 실행 스크립트 -->
+	<script charset="UTF-8">
+            new daum.roughmap.Lander({
+                "timestamp" : "1537537394352",
+                "key" : "q5xe",
+                "mapWidth" : 350,
+                "mapHeight" : "300"
+                }).render();
+    </script>
 </body>
 </html>
