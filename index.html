@@ -218,19 +218,7 @@ body {
             <span><img src="https://cdn4.iconfinder.com/data/icons/miu/24/house-home-real_estate-property-glyph-128.png" alt="place" /> <strong>장소 :</strong> | 대전광역시 서구 갈마로 241/ 지번 : 대전광역시 서구 갈마로 92-11</span>
         </div>
 		<div class="map_wrap" id="map"></div>
-		<!--
-        <div class="tras_wrap">
-            <div>
-                <div class="what"><img src="https://cdn2.iconfinder.com/data/icons/vehicles-7/24/vehicles-04-128.png" alt="metro" />지하철</div>
-                <div class="is">분당선 수내역 3번 출구</div>
-            </div>
-            <div>
-                <div class="what"><img src="https://cdn2.iconfinder.com/data/icons/vehicles-7/24/vehicles-12-128.png" alt="metro" />버스</div>
-                <div class="is">2, 52, 220, 1303, 115, 52, 15, 17, 33, 52, 55-1, 250, 300, 380, 390, 520, 730, 5200, 5400</div>
-            </div>
-		</div>
-		-->
-		
+
 		<!-- * Daum 지도 - 지도퍼가기 -->
 <!-- 1. 지도 노드 -->
 <div id="daumRoughmapContainer1537530979313" class="root_daum_roughmap root_daum_roughmap_landing"></div>
@@ -246,7 +234,7 @@ body {
 	new daum.roughmap.Lander({
 		"timestamp" : "1537530979313",
 		"key" : "q5x6",
-		"mapWidth" : 100,
+		"mapWidth" : 350,
 		"mapHeight" : "350"
 	}).render();
 </script>
@@ -264,19 +252,19 @@ var mapContainer = document.getElementById('mapdaum'), // 지도를 표시할 di
         level: 3 // 지도의 확대 레벨
     };
 
-var mapdaum = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
 // 지도를 클릭한 위치에 표출할 마커입니다
 var marker = new daum.maps.Marker({ 
     // 지도 중심좌표에 마커를 생성합니다 
-    position: mapdaum.getCenter() 
+    position: map.getCenter() 
 }); 
 // 지도에 마커를 표시합니다
-marker.setMap(mapdaum);
+marker.setMap(map);
 
 // 지도에 클릭 이벤트를 등록합니다
 // 지도를 클릭하면 마지막 파라미터로 넘어온 함수를 호출합니다
-daum.maps.event.addListener(mapdaum, 'click', function(mouseEvent) {        
+daum.maps.event.addListener(map, 'click', function(mouseEvent) {        
     
     // 클릭한 위도, 경도 정보를 가져옵니다 
     var latlng = mouseEvent.latLng; 
