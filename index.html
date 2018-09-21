@@ -211,9 +211,9 @@ body {
     <div id="wrap">
         <!---->
         <div>
-			<img src="https://user-images.githubusercontent.com/12040501/45889953-b6bc4480-bdfc-11e8-878a-62f51a248a6e.png" class="img200" />
-			<img src="https://user-images.githubusercontent.com/12040501/45889956-b7ed7180-bdfc-11e8-807b-fc8479dfbd13.png" class="img200" />
-			<img src="https://user-images.githubusercontent.com/12040501/45889959-ba4fcb80-bdfc-11e8-9764-1752f01e4811.png" class="img200" />
+			<img src="https://user-images.githubusercontent.com/12040501/45909049-c65a7e00-be3a-11e8-8c39-c64fa6860ce5.png" class="img200" />
+			<img src="https://user-images.githubusercontent.com/12040501/45909054-c8244180-be3a-11e8-9f31-40d021576879.png" class="img200" />
+			<img src="https://user-images.githubusercontent.com/12040501/45909056-ca869b80-be3a-11e8-92dd-dbc73f0155a5.png" class="img200" />
         </div>
 		<!---->
 		<!--  -  
@@ -226,26 +226,26 @@ body {
 			LOCATION<br/>
 			찾아오시는길
 		</div>
-		<div class="map_wrap">
-			<!-- * Daum 지도 - 지도퍼가기 -->
-			<!-- 1. 지도 노드 -->
-			<div id="daumRoughmapContainer1537537394352" class="root_daum_roughmap root_daum_roughmap_landing"></div>
-		</div>
-			<!--
-				2. 설치 스크립트
-				* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
-			-->
-			<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+		
+		<!-- * Daum 지도 - 지도퍼가기 -->
+		<!-- 1. 지도 노드 -->
+		<div id="daumRoughmapContainer1537537394352" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+		
+		<!--
+			2. 설치 스크립트
+			* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+		-->
+		<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
 
-			<!-- 3. 실행 스크립트 -->
-			<script charset="UTF-8">
-				new daum.roughmap.Lander({
-					"timestamp" : "1537537394352",
-					"key" : "q5xe",
-					"mapWidth" : "450",
-					"mapHeight" : "300"
+		<!-- 3. 실행 스크립트 -->
+		<script charset="UTF-8">
+			new daum.roughmap.Lander({
+				"timestamp" : "1537537394352",
+				"key" : "q5xe",
+				"mapWidth" : 350,
+				"mapHeight" : "300"
 				}).render();
-			</script>
+		</script>
 
 		<div class="contact_wrap">
 			<a href="http://map.daum.net/link/to/12720796">길찾기</a>
