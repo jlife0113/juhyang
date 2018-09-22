@@ -37,25 +37,11 @@ body {
 	background-color: #fff;
 }
 
-.backgroud
-
 .img100 {
 	max-width: 100%;
 	width: auto !important;
 	width: 100%;
 }
-
-    .img200 {
-        max-width: 100%;
-        width: 100%;
-        height: 100%;
-    }
-    .img300 {
-        max-width: 100%;
-        width: auto !important;
-        width: 100%;
-        position: relative;
-    }
 
 #autoplay, .slide_wrap {
 	position:relative;
@@ -220,26 +206,10 @@ body {
 			LOCATION<br/>
 			찾아오시는길
 		</div>
+		<!-- map -->
 		<div id="map" style="width:100%;height:350px;"></div>
-		<!-- * Daum 지도 - 지도퍼가기 -->
-		<!-- 1. 지도 노드 -->
-		<div id="daumRoughmapContainer1537537394352" class="root_daum_roughmap root_daum_roughmap_landing" align="center"></div>
-		
-		<!--
-			2. 설치 스크립트
-			* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
-		-->
-		<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
 
-		<!-- 3. 실행 스크립트 -->
-		<script charset="UTF-8">
-			new daum.roughmap.Lander({
-				"timestamp" : "1537537394352",
-				"key" : "q5xe",
-				"mapWidth" : 350,
-				"mapHeight" : "300"
-				}).render();
-		</script>
+		<!-- picture-->
 		<div class="slide_wrap">
 			<div id="autoplay" style="display:none;">
 			<!-- //이미지 추가 -->
@@ -296,7 +266,7 @@ body {
 		});
 		// 마커가 지도 위에 표시되도록 설정합니다
 		marker.setMap(map);
-		var iwContent = '<div style="padding:1px;text-align:center;">주향제일교회<br><a href="http://map.daum.net/link/to/12720796" style="color:#888" target="_blank">지도보기</a> <a href="http://map.daum.net/link/to/12720796" style="color:#888" target="_blank">길찾기</a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+		var iwContent = '<div style="padding:5px;align:center;">주향제일교회<br><a href="http://map.daum.net/link/to/12720796" style="color:#888" target="_blank">지도보기</a> <a href="http://map.daum.net/link/to/12720796" style="color:#888" target="_blank">길찾기</a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
 			iwPosition = new daum.maps.LatLng(36.334997, 127.381132); //인포윈도우 표시 위치입니다
 		// 인포윈도우를 생성합니다
 		var infowindow = new daum.maps.InfoWindow({
